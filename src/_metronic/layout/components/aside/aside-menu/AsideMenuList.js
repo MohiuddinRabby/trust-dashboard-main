@@ -17,155 +17,96 @@ export function AsideMenuList({ layoutProps }) {
 
   return (
     <>
-    {/* begin::Menu Nav */}
-    <ul className={`menu-nav ${layoutProps.ulClasses}`}>
-      {/*begin::1 Level*/}
-      <li
-        className={`menu-item ${getMenuItemActive("/dashboard", false)}`}
-        aria-haspopup="true"
-      >
-        <NavLink className="menu-link" to="/dashboard">
-          <span className="svg-icon menu-icon">
-            <SVG src={toAbsoluteUrl("/media/svg/icons/Design/Layers.svg")} />
-          </span>
-          <span className="menu-text">Dashboard</span>
-        </NavLink>
-      </li>
-      {/* Applications */}
-      {/* begin::section */}
-      <li className="menu-section ">
-        <h4 className="menu-text">Applications</h4>
-        <i className="menu-icon flaticon-more-v2"></i>
-      </li>
-      {/* end:: section */}
+      {/* begin::Menu Nav */}
+      <ul className={`menu-nav ${layoutProps.ulClasses}`}>
+        {/*begin::1 Level*/}
+        <li
+          className={`menu-item ${getMenuItemActive("/dashboard", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/dashboard">
+            <span className="svg-icon menu-icon">
+              <SVG src={toAbsoluteUrl("/media/svg/icons/Design/Layers.svg")} />
+            </span>
+            <span className="menu-text">Dashboard</span>
+          </NavLink>
+        </li>
+        {/* Applications */}
+        {/* begin::section */}
+        <li className="menu-section ">
+          <h4 className="menu-text">Applications</h4>
+          <i className="menu-icon flaticon-more-v2"></i>
+        </li>
+        {/* end:: section */}
 
-      {/* eCommerce */}
-      {/*begin::1 Level*/}
-      <li
-        className={`menu-item menu-item-submenu ${getMenuItemActive(
-          "/e-commerce",
-          true
-        )}`}
-        aria-haspopup="true"
-        data-menu-toggle="hover"
-      >
-        <NavLink className="menu-link menu-toggle" to="/e-commerce">
-          <span className="svg-icon menu-icon">
-            <SVG
-              src={toAbsoluteUrl("/media/svg/icons/Design/Component.svg")}
-            />
-          </span>
-          <span className="menu-text">Modules</span>
-        </NavLink>
-        <div className="menu-submenu">
-          <i className="menu-arrow" />
-          <ul className="menu-subnav">
-            <li className="menu-item menu-item-parent" aria-haspopup="true">
-              <span className="menu-link">
-                <span className="menu-text">eCommerce</span>
-              </span>
-            </li>
-            {/*begin::2 Level*/}
-            <li
-              className={`menu-item ${getMenuItemActive(
-                "/e-commerce/customers"
-              )}`}
-              aria-haspopup="true"
-            >
-              <NavLink className="menu-link" to="/e-commerce/customers">
-                <i className="menu-bullet menu-bullet-dot">
-                  <span />
-                </i>
-                <span className="menu-text">Customers</span>
-              </NavLink>
-            </li>
-            {/*end::2 Level*/}
-            {/*begin::2 Level*/}
-            <li
-              className={`menu-item ${getMenuItemActive(
-                "/e-commerce/products"
-              )}`}
-              aria-haspopup="true"
-            >
-              <NavLink className="menu-link" to="/e-commerce/products">
-                <i className="menu-bullet menu-bullet-dot">
-                  <span />
-                </i>
-                <span className="menu-text">Products</span>
-              </NavLink>
-            </li>
-            {/*end::2 Level*/}
-          </ul>
-        </div>
-      </li>
-      {/*end::1 Level*/}
-      {/* =====test modules start==== */}
-      <li
-        className={`menu-item menu-item-submenu ${getMenuItemActive(
-          "/test-modules",
-          true
-        )}`}
-        aria-haspopup="true"
-        data-menu-toggle="hover"
-      >
-        <NavLink className="menu-link menu-toggle" to="/test-modules">
-          <span className="svg-icon menu-icon">
-            <SVG
-              src={toAbsoluteUrl("/media/svg/icons/Design/Component.svg")}
-            />
-          </span>
-          <span className="menu-text">Test Modules</span>
-        </NavLink>
-        <div className="menu-submenu">
-          <i className="menu-arrow" />
-          <ul className="menu-subnav">
-            <li className="menu-item menu-item-parent" aria-haspopup="true">
-              <span className="menu-link">
-                <span className="menu-text">testModules</span>
-              </span>
-            </li>
-            {/*begin::2 Level*/}
-            <li
-              className={`menu-item ${getMenuItemActive(
-                "/test-modules/test-customer-list"
-              )}`}
-              aria-haspopup="true"
-            >
-              <NavLink
-                className="menu-link"
-                to="/test-modules/test-customer-list"
+        {/* eCommerce */}
+        {/* =====test modules start==== */}
+        <li
+          className={`menu-item menu-item-submenu ${getMenuItemActive(
+            "/test-modules",
+            true
+          )}`}
+          aria-haspopup="true"
+          data-menu-toggle="hover"
+        >
+          <NavLink className="menu-link menu-toggle" to="/test-modules">
+            <span className="svg-icon menu-icon">
+              <SVG
+                src={toAbsoluteUrl("/media/svg/icons/Design/Component.svg")}
+              />
+            </span>
+            <span className="menu-text">Test Modules</span>
+          </NavLink>
+          <div className="menu-submenu">
+            <i className="menu-arrow" />
+            <ul className="menu-subnav">
+              <li className="menu-item menu-item-parent" aria-haspopup="true">
+                <span className="menu-link">
+                  <span className="menu-text">testModules</span>
+                </span>
+              </li>
+              {/*begin::2 Level*/}
+              <li
+                className={`menu-item ${getMenuItemActive(
+                  "/test-modules/test-customer-list"
+                )}`}
+                aria-haspopup="true"
               >
-                <i className="menu-bullet menu-bullet-dot">
-                  <span />
-                </i>
-                <span className="menu-text">Test Customers List</span>
-              </NavLink>
-            </li>
-            {/*end::2 Level*/}
-            {/*begin::2 Level*/}
-            <li
-              className={`menu-item ${getMenuItemActive(
-                "/test-modules/test-customer-create"
-              )}`}
-              aria-haspopup="true"
-            >
-              <NavLink
-                className="menu-link"
-                to="/test-modules/test-customer-create"
+                <NavLink
+                  className="menu-link"
+                  to="/test-modules/test-customer-list"
+                >
+                  <i className="menu-bullet menu-bullet-dot">
+                    <span />
+                  </i>
+                  <span className="menu-text">Test Customers List</span>
+                </NavLink>
+              </li>
+              {/*end::2 Level*/}
+              {/*begin::2 Level*/}
+              <li
+                className={`menu-item ${getMenuItemActive(
+                  "/test-modules/test-customer-create"
+                )}`}
+                aria-haspopup="true"
               >
-                <i className="menu-bullet menu-bullet-dot">
-                  <span />
-                </i>
-                <span className="menu-text">Test Customers Create</span>
-              </NavLink>
-            </li>
-            {/*end::2 Level*/}
-          </ul>
-        </div>
-      </li>
-      {/* =====test modules end==== */}
-    </ul>
-    {/* end::Menu Nav */}
-  </>
+                <NavLink
+                  className="menu-link"
+                  to="/test-modules/test-customer-create"
+                >
+                  <i className="menu-bullet menu-bullet-dot">
+                    <span />
+                  </i>
+                  <span className="menu-text">Test Customers Create</span>
+                </NavLink>
+              </li>
+              {/*end::2 Level*/}
+            </ul>
+          </div>
+        </li>
+        {/* =====test modules end==== */}
+      </ul>
+      {/* end::Menu Nav */}
+    </>
   );
 }
