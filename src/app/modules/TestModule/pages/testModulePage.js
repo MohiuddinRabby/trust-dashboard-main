@@ -4,7 +4,7 @@ import { Redirect, Switch } from "react-router-dom";
 import { LayoutSplashScreen, ContentRoute } from "../../../../_metronic/layout";
 import { TestCustomerCreate } from "./testCustomer/TestCustomerCreate";
 import { TestCustomerList } from "./testCustomer/TestCustomerList";
-export default function testModulePage() {
+export default function TestModulePage() {
   return (
     <div>
       <Suspense fallback={<LayoutSplashScreen />}>
