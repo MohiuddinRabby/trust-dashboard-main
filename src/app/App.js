@@ -22,7 +22,7 @@ export default function App({ basename }) {
             {/* Provide `react-intl` context synchronized with Redux state.  */}
             <I18nProvider>
               {/* Render routes with provided `Layout`. */}
-              <ToastContainer position="bottom-right" />
+              <ToastContainer position="top-right" autoClose={3000} />
               <Routes />
             </I18nProvider>
           </MaterialThemeProvider>

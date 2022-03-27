@@ -8,10 +8,12 @@ const validationSchema = Yup.object().shape({
   userEmail: Yup.string()
     .email()
     .required("Email required"),
+  userAddress: Yup.string().required("Address required"),
 });
 const initialValues = {
-  userName: "",
-  userEmail: "",
+  userName: "John Doe",
+  userEmail: "john@testmail.com",
+  userAddress: "city avenue 11A/2B",
 };
 export function TestCustomerCreate() {
   return (
@@ -24,12 +26,13 @@ export function TestCustomerCreate() {
             userId: 1,
             title: values?.userName,
             body: values?.userEmail,
+            address: values?.userAddress,
           };
           createBlogPost(itemsData);
           resetForm();
         }}
       >
-        {({ values, setFieldValue, isValid }) => (
+        {({ values, setFieldValue, errors, touched, isValid }) => (
           <>
             <Form>
               <div className="container">
@@ -56,6 +59,18 @@ export function TestCustomerCreate() {
                     />
                     <div className="text-danger">
                       <ErrorMessage name="userEmail" />
+                    </div>
+                  </div>
+                  <div className="col-lg-4">
+                    <label>Address</label>
+                    <Field
+                      className="form-control"
+                      name="userAddress"
+                      placeholder="Email"
+                      value={values?.userAddress}
+                    />
+                    <div className="text-danger">
+                      <ErrorMessage name="userAddress" />
                     </div>
                   </div>
                 </div>

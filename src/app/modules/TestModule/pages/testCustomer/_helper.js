@@ -8,7 +8,7 @@ export const getBlogPosts = async (setter) => {
       setter(res?.data?.slice(0, 15));
     }
   } catch (error) {
-    console.log(error.message);
+    toast.error(error.message);
   }
 };
 export const createBlogPost = async (data) => {
@@ -22,6 +22,6 @@ export const createBlogPost = async (data) => {
       toast.success("Submitted succesfully");
     }
   } catch (error) {
-    console.log(error.message);
+    toast.error(error.message);
   }
 };
