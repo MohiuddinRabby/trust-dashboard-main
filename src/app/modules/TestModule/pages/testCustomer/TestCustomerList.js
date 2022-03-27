@@ -6,7 +6,6 @@ export function TestCustomerList() {
   useEffect(() => {
     getBlogPosts(setGridData);
   }, []);
-  console.log(gridData);
   return (
     <div>
       <h1 className="text-center">Test customer list</h1>
