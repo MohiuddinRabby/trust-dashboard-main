@@ -7,7 +7,8 @@ import { BrowserRouter } from "react-router-dom";
 import { Routes } from "../app/Routes";
 import { I18nProvider } from "../_metronic/i18n";
 import { LayoutSplashScreen, MaterialThemeProvider } from "../_metronic/layout";
-
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 export default function App({ basename }) {
   return (
     /* Provide Redux store */
@@ -21,7 +22,7 @@ export default function App({ basename }) {
             {/* Provide `react-intl` context synchronized with Redux state.  */}
             <I18nProvider>
               {/* Render routes with provided `Layout`. */}
-
+              <ToastContainer position="bottom-right" />
               <Routes />
             </I18nProvider>
           </MaterialThemeProvider>

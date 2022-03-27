@@ -1,14 +1,15 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense } from "react";
 import { Redirect, Switch, Route } from "react-router-dom";
 import { LayoutSplashScreen, ContentRoute } from "../_metronic/layout";
 import { BuilderPage } from "./pages/BuilderPage";
 import { MyPage } from "./pages/MyPage";
 import { DashboardPage } from "./pages/DashboardPage";
+import TestModulePage from "./modules/TestModule/pages/TestModulePage";
 
 // importing Modules (TestModulePage) as lazy
-const TestModulePage = lazy(() =>
-  import("./modules/TestModule/pages/TestModulePage")
-);
+// const TestModulePage = lazy(() =>
+//   import("./modules/TestModule/pages/TestModulePage")
+// );
 
 export default function BasePage() {
   // useEffect(() => {
