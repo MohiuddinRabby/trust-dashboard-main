@@ -17,15 +17,15 @@ export function TestCustomerList() {
             <th scope="col">body</th>
           </tr>
         </thead>
-        <tbody>
-          {gridData?.map((data) => (
-            <tr key={data?.id}>
-              <th scope="col">{data?.id}</th>
-              <th scope="col">{data?.title}</th>
-              <th scope="col">{data?.body}</th>
+        {gridData?.map((items) => (
+          <tbody key={items?.id}>
+            <tr>
+              <th scope="col">{items?.id}</th>
+              <th scope="col">{items?.title}</th>
+              <th scope="col">{items?.body}</th>
             </tr>
-          ))}
-        </tbody>
+          </tbody>
+        ))}
       </table>
     </div>
   );

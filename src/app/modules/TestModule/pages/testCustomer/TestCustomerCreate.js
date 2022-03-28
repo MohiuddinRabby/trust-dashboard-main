@@ -11,9 +11,9 @@ const validationSchema = Yup.object().shape({
   userAddress: Yup.string().required("Address required"),
 });
 const initialValues = {
-  userName: "John Doe",
-  userEmail: "john@testmail.com",
-  userAddress: "city avenue 11A/2B",
+  userName: "",
+  userEmail: "",
+  userAddress: "",
 };
 export function TestCustomerCreate() {
   return (
@@ -42,7 +42,7 @@ export function TestCustomerCreate() {
                     <Field
                       className="form-control"
                       name="userName"
-                      placeholder="User Name"
+                      placeholder="John Doe"
                       value={values?.userName}
                     />
                     <div className="text-danger">
@@ -54,7 +54,7 @@ export function TestCustomerCreate() {
                     <Field
                       className="form-control"
                       name="userEmail"
-                      placeholder="Email"
+                      placeholder="test@mail.com"
                       value={values?.userEmail}
                     />
                     <div className="text-danger">
@@ -66,7 +66,7 @@ export function TestCustomerCreate() {
                     <Field
                       className="form-control"
                       name="userAddress"
-                      placeholder="Email"
+                      placeholder="City avenue, 12/B"
                       value={values?.userAddress}
                     />
                     <div className="text-danger">
