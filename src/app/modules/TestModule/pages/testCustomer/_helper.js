@@ -25,3 +25,15 @@ export const createBlogPost = async (data) => {
     toast.error(error.message);
   }
 };
+export const deletePost = async (id) => {
+  try {
+    const res = await Axios.delete(
+      `https://jsonplaceholder.typicode.com/posts/${id}`
+    );
+    if (res.status === 200) {
+      alert("deleted succesfully");
+    }
+  } catch (error) {
+    console.log(error.message);
+  }
+};
